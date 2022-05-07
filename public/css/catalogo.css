@@ -1,0 +1,74 @@
+.multi-level, .item ul, .navb input[type="checkbox"]{
+    display: none;
+}
+#menu:checked ~ .multi-level, .item input:checked ~ ul {
+    display: block;
+}
+
+/*Arrow*/
+
+.arrow {
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    float: left;
+    z-index: 0;
+    margin: 17px 1em 0 2em;
+}
+.item input + .arrow {
+    transform: rotate(-90deg);
+    transition: 0.1s;
+}
+.item input:checked + .arrow {
+    transform: rotate(0deg);
+    transition: 0.1s;
+}
+
+/*Styles*/
+
+.labelcat:hover {
+    cursor: pointer;
+}
+.labelcat:active {
+    background-color: #212161;
+}
+.labelcat {
+    width: 100%;
+    display: block;
+    z-index: 3;
+    position: relative;
+}
+.navb {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#nav-icon {
+    font-size: 24px;
+    line-height: 40px;
+    padding-left: 1em;
+    color: white;
+}
+
+.navb ul, .navb li, .labelcat {
+    line-height: 40px;
+    margin: 0;
+    padding: 0 2em;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    /*font-weight: 100;*/
+    width: 100%;
+}
+.item ul {
+    padding: 0 0.25em;
+}
+.navb li a {
+    line-height: 50px;
+    margin: 0;
+    padding: 0 4em;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+}
